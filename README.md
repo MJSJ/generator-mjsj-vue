@@ -13,9 +13,9 @@
 
 ## 使用脚手架生成项目
 *   npm install -g yo
-*   npm install -g @gfe/generator-vue-gfe
+*   npm install -g generator-mjsj-vue
 *   cd /path/of/your/project  //切到你的项目目录
-*   yo @gfe/vue-gfe  //在你的项目目录下执行
+*   yo mjsj-vue  //在你的项目目录下执行
 
 ## vue2 项目目录结构
 ```
@@ -109,11 +109,3 @@
 ## 构建
 *   执行npm run build命令，会在dist/static目录下，生成webpack打包后的.js和.css文件。
 
-## 注意事项
-*	不支持cortex
-*	CI请选择peon_static或者static_server
-*   <font color=#f00>特别强调 营销组件请走generator-gfe-peon-static  营销组件请走generator-gfe-peon-static  营销组件请走generator-gfe-peon-static</font>
-
-## 友情链接
-*   [到综WEB前端修炼册](http://gfe.docs.sankuai.com/)
-*   [配置化的vue技术栈脚手架](http://npm.sankuai.com/package/@dp/generator-gfe)

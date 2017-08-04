@@ -31,7 +31,7 @@ module.exports = yeoman.Base.extend({
         var done = this.async();
 
         this.log(yosay(
-            'Welcome to the sweet ' + chalk.red('generator-vue-gfe') + ' generator!'
+            'Welcome to the sweet ' + chalk.red('generator-mjsj-vue') + ' generator!'
         ));
         let allBoilerplates=_.keys(boilerplatesMap);
         var prompts = [

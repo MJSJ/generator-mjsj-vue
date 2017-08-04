@@ -56,11 +56,11 @@ module.exports = {
             {
                 test: /\.vue$/,
                 loader: 'vue',
-                exclude: /node_modules\/(?!@(gfe|dp))/
+                exclude: /node_modules/
             }, {
                 test: /\.(es6|js)$/,
                 loader: 'babel',
-                exclude: /node_modules\/(?!@(gfe|dp))/
+                exclude: /node_modules/
             }, {
                 test: /\.css$/,
                 loader: ExtractTextPlugin.extract('css-loader?-restructuring!postcss')

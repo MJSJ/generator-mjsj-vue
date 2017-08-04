@@ -34,7 +34,7 @@ var plugins = [
         options: {
             postcss: [
                 Autoprefixer({
-                    browsers: ['> 1%']
+                    browsers: ['> 1%','ios 8']
                 })
             ]
         }
@@ -77,7 +77,7 @@ if (env == "dev") {
     vueloadRule = {
         test: /\.vue$/,
         loader: 'vue-loader',
-        exclude: /node_modules\/(?!@(gfe|dp))/,
+        exclude: /node_modules/,
         options: {
             loaders: {
                 'css': "vue-style-loader!css-loader!postcss-loader",
@@ -89,7 +89,7 @@ if (env == "dev") {
     vueloadRule = {
         test: /\.vue$/,
         loader: 'vue-loader',
-        exclude: /node_modules\/(?!@(gfe|dp))/,
+        exclude: /node_modules/,
         options: {
             loaders: {
                 'css': ExtractTextPlugin.extract(cssOption),
@@ -109,7 +109,7 @@ module.exports = {
         chunkFilename: '[name].[chunkhash].js',
         sourceMapFilename: '[name].map'
     },
-    //devtool: 'source-map',
+    devtool: 'inline-source-map',
     resolve: {
         modules: [path.resolve(__dirname, 'node_modules')],
         extensions: ['.js', '.es6', '.json', '.jsx', '.vue']
@@ -125,7 +125,7 @@ module.exports = {
                         cacheDirectory: env == "dev"
                     }
                 }],
-                exclude: /node_modules\/(?!@(gfe|dp))/
+                exclude: /node_modules/
             }, {
                 test: /\.css$/,
                 use: ExtractTextPlugin.extract(cssOption)
